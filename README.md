@@ -1,4 +1,4 @@
-# Cybersecurity Portfolie - Adebare Adeoluwa
+# Cybersecurity Portfolio - Adebare Adeoluwa
 
 SOC Analyst in progress | Blue Team
 
