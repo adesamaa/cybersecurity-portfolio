@@ -20,10 +20,12 @@ Command used:
 hydra -l root -P /usr/share/wordlists/rockyou.txt.gz ssh://192.168.5.8 -t 4 -V
 
 ## What Wazuh Detected
-- 3,--- total alerts generated
-- 2,--- authentication failures
+- 7,735 total alerts generated
+- 7,623 authentication failures
 - Rule 5557 fired - "Password check failed" (Severity Level 5)
-- Attack automatically mapped to MITRE ATT&CK: T1110 - Brute FOrce / Password Guessing
+- Attack automatically mapped to MITRE ATT&CK: T1110 - Brute Force / Password Guessing
+- Rule 5760 fired - "authentication failed"
+- Attack automatically mapped to MITRE ATT&CK: T1110.001, T1021.004 - Password Guessing, SSH
 
 ## Investigation Findings
 | Field | Value |
@@ -49,6 +51,6 @@ hydra -l root -P /usr/share/wordlists/rockyou.txt.gz ssh://192.168.5.8 -t 4 -V
 
 ##Screenshots
 See screenshots folder for:
-- Wazuh Threat Hunting dashboard flowing 2,172
+- Wazuh Threat Hunting dashboard flowing 7,735
 - Events tab showing individual alert entries
 - Expanded event showing rule fields
