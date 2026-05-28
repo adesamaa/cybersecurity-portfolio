@@ -3,7 +3,7 @@
 ## Objective
 Stimulate a brute force SSH attack and detect it in real time using wazuh SIEM.
 
-##Environment
+## Environment
 - **SIEM:** Wazuh v4.9.1
 - **Attacker Machine:** Kali Linux (VIrtualBox VM)
 - **Target Machine:** Wazuh Server (VirtualBox VM)
