@@ -54,3 +54,8 @@ See screenshots folder for:
 - Wazuh Threat Hunting dashboard flowing 7,735
 - Events tab showing individual alert entries
 - Expanded event showing rule fields
+![Dashboard Alerts](1-wazuh_dashboard_alerts.png)
+![Events Feed](2-events_feed_a.png)
+![Events Feed2](3-events_feed_b.png)
+
+
