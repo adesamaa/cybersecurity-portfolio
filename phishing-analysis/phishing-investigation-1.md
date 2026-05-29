@@ -17,7 +17,7 @@ Blue Team Labs Online - Phishing Analysis Challenge
 | Artifact | Value |
 | --- | --- |
 | Primary Recipient | kinnar1975@yahoo.co.uk |
-| Subject | Undeliverable: Website contact information |
+| Subject | Undeliverable: Website contact form submission |
 | Date Sent | 18, March 2021 04:14 |
 | Originating IP | 103.9.171.10 |
 | Resolved Host | c5s2-1e-syd.hosting-services.net.au |
@@ -33,9 +33,16 @@ NDR Spoofing -- attacker sent email from a disabled mailbox triggering an automa
 - Technique: T1566 - Phishing
 
 ## Key Lessons Learned
-Email should be viewed with caution because there are lots of malicious threat actors hiding behind what appears to be a valid email, SOC analyst should always pay attention when analyzing mails such as these and also advise other employees to be more cautious and to report anything suspicious, if they spot any.
+1. The displayed From field can be completely spoofed - always check Return-Path and X-Sender-IP for the true origin.
+2. NDR bounce emails are used to deliver malicious content because victims trust automated system messages.
+3. A malicious URL doesn't need to be active to be evidence - URL2PNG captures snaapshots even of taken-down pages.
 
 ## Conclusion
-This was a malicious mail in order to gain access to the victims system, as an junior SOC analysts, such mails should be flagged with the appropriate reasons and then escalated to a higher tier for the issue to be addressed.
+This was a malicious mail sent in order to gain access to the victims system, as an junior SOC analysts, such mails should be flagged with the appropriate reasons and then escalated to a higher tier for the issue to be addressed.
+ways to handle it are:
+- Block the originating IP 103.9.171.10 at the firewall to prevent future mails from coming in from that source.
+- Add the malicious domain to the blocklist
+- Notify the recepient to change credentials.
+- FInally, escalate to tier 2 with fulll artifact report.
 
 -
