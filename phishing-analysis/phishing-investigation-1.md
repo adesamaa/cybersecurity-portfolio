@@ -38,11 +38,10 @@ NDR Spoofing -- attacker sent email from a disabled mailbox triggering an automa
 3. A malicious URL doesn't need to be active to be evidence - URL2PNG captures snaapshots even of taken-down pages.
 
 ## Conclusion
-This was a malicious mail sent in order to gain access to the victims system, as an junior SOC analysts, such mails should be flagged with the appropriate reasons and then escalated to a higher tier for the issue to be addressed.
+This was a malicious mail sent in order to gain access to the victims system. As a SOC analysts, such mails should be flagged with the appropriate reasons and then escalated to a higher tier for the issue to be addressed.
 ways to handle it are:
 - Block the originating IP 103.9.171.10 at the firewall to prevent future mails from coming in from that source.
 - Add the malicious domain to the blocklist
 - Notify the recepient to change credentials.
 - FInally, escalate to tier 2 with fulll artifact report.
 
--
