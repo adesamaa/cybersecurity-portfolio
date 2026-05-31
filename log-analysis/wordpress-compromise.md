@@ -3,7 +3,7 @@
 ## Scenario 
 A Linux web server running WordPress was compromised. Analyse the Apache access logs to reconstruct the attack.
 
-##Platforms
+## Platforms
 Blue Tean Labs Online - Log Analysis Challenge
 
 ## Tools Used
@@ -28,7 +28,7 @@ Attacker used the discovered login URL: /wp-login.php?itsec-hb-token=adminlogin 
 Exploited CVE-2020-35489 in Contact Form 7 plugin - an unrestricted file upload vulnerability. Used Simple File List plugin (v4.2.2) to upload a PHP web shell.
 
 ### Step 4 - Web Shell Upload
-Successfully uploaded fr34k.php to the server. A PHP web shell gives the attaacker browser-based terminal access to run commands on the server.
+Successfully uploaded fr34k.php to the server. A PHP web shell gives the attacker browser-based terminal access to run commands on the server.
 
 ### Step 5 - Lockout and Cleanup
 Security plugin detected the attack and locked the attacker out. Attacker attempted path traversal to bypass lockout - all failed (403). Final access to fr34k.php returned 404 - shell was removed.
@@ -38,7 +38,7 @@ Security plugin detected the attack and locked the attacker out. Attacker attemp
 | --- | --- |
 | Admin Login URI | /wp-login.php?itsec-hb-token=adminlogin |
 | Tools Used | WPScan, SQLmap |
-| CVE Exploited | CVE-20200-35489 |
+| CVE Exploited | CVE-2020-35489 |
 | Plugin Exploited | Simple File List v4.2.2 |
 | Web Shell Filename | fr34k.php |
 | Final Web Shell Response | 404 |
@@ -66,7 +66,15 @@ Security plugin detected the attack and locked the attacker out. Attacker attemp
 
 ## Key Lessons Learned
 - Reading through the logs meticously is very important in order not to miss indicators of compromise.
-- better security posture should be employed for the wordpress especially in respect to the vulnerability that was spotted.
+- A successful login (HTTP 200) on wp-login.php is not the end of the attack - it's the beginning. Always investigate what the attacker did AFTER gaining access, not just how they got in.
+- PHP web shells like fr34k.php are dangerous because they give attackers persistent browser-based access to run system comands, always check upload directories for unexpected .php files.
 
 ## Conclusion
-As a SOC analyst, this is a classic situation of going through logs to identify brute force attempts, what i would do is to search the log files gotten thorougly to identify any anomaly as we have done here then, prepare a proper report to accompany my escalation message to my superior.
+This was a confirmed compromise. As a SOC analyst, this is a classic situation of going through logs to identify brute force attempts, my immediate response actions would be:
+1. Block 197.23.123.35 at the firewall immediately.
+2. Take the WordPress site offline to prevent further damage.
+3. Search all upload directories for additional web shells.
+4. Reset all WordPress admin credentials.
+5. Patch Contact Form 7 and Simple File List plugins immediately.
+6. Escalate to Tier 2 with full artifact report and attack timeline.
+7. Notify site owner of the breach.
