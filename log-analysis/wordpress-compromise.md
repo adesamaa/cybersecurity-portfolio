@@ -3,7 +3,7 @@
 ## Scenario 
 A Linux web server running WordPress was compromised. Analyse the Apache access logs to reconstruct the attack.
 
-## Platforms
+## Platform
 Blue Tean Labs Online - Log Analysis Challenge
 
 ## Tools Used
