@@ -42,5 +42,8 @@ True Positive - Privilege Escalation
 | Defense Evasion | T1036 - Masquerading |
 
 ## Lessons Learned 
+- Running processes on a system should always be paid attention to, in order to spot any malicious process as soon as possible, malicious processes can pose as legitmate ones under the guise of using similar name that is easy to ignore like in this case (svohost.exe).
+- Processes that spawn from the 'C:\temp' directory are almost always a red flag, this is because the \temp directory gives users executable and writable permissions that they wouldn't normally get if they were to run the program in \Progam Files or \System32 directory.
+- After researching CVE, always take active steps to ensure that the systems are patched for this vulnerability in order to avoid future attacks that may want to exploit this weakness. Patching should be included as a recommendation when preparing your report that would be submitted to the senior SOC Analyst.
 
 
