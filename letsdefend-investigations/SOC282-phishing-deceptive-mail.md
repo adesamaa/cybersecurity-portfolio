@@ -45,7 +45,8 @@ True Positive - Phishing
 5. Notify Felix not to click any links or open attachments
 6. Search email gateway logs for other recipients of emails from the same domain
 7. Escalate to Tier 2 with full artifact report
-8. 
+
+ 
 ## MITRE ATT&CK
 - Tactic: Initial Access
 - Technique: T1566 - Phishing
