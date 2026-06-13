@@ -13,15 +13,20 @@
 | Device Action | Allowed |
 
 ## Investigation Process
-### Step 1 - Reviewed alert details noting; SMTP address - free@coffeeshooop.com, destination - Felix@letsdefend.io, subject - "Free Coffee Voucher", device action - Allowed meaning the email reached the recipient inbox. 
+### Step 1 - Initial Alert Review
+Reviewed alert details noting: SMTP address - free@coffeeshooop.com, destination - Felix@letsdefend.io, subject - "Free Coffee Voucher", device action - Allowed meaning the email reached the recipient inbox. 
 Flagged for immediate investigation.
-### Step 2 - Carefully examined sender address free@coffeeshooop.com, identified typosquatting - coffeesshooop.com contains three o's instead of two, mimicking a legitimae coffee brand domain.
+### Step 2 - Sender Domain Analysis 
+Carefully examined sender address free@coffeeshooop.com, identified typosquatting - coffeesshooop.com contains three o's instead of two, mimicking a legitimae coffee brand domain.
 This is a clear indicator of phishing intent.
-### Step 3 - IP Reputation Check (AbuseIPDB): Checked SMTP IP 103.80.134.63 on AbuseIPDB. Result: 0% abuse confidence score - IP appears clean. 
+### Step 3 - IP Reputation Check (AbuseIPDB)
+Checked SMTP IP 103.80.134.63 on AbuseIPDB. Result: 0% abuse confidence score - IP appears clean. 
 Note: Clean IP does not clear the alert - attackers regularly use fresh IPs to avoid reputation-based detection.
-### Step 4 - URL Analysis (VirusTotal): Extracted URL from email body and checked on VirusTotal. 
+### Step 4 - URL Analysis (VirusTotal)
+Extracted URL from email body and checked on VirusTotal. 
 Result: Flagged as malicious by multiple detection engines. This confirmed the email as malicious regardless of clean IP.
-### Step 5 - Email Content Review:  Email body containeda free coffee voucher lure with an attached document. Classic social engineering technique - reward-based urgency designed to get victim to click without thinking critically.
+### Step 5 - Email Content Review
+Email body containeda free coffee voucher lure with an attached document. Classic social engineering technique - reward-based urgency designed to get victim to click without thinking critically.
 
 ## Key Findings
 - Typosquatted domain: coffeeshooop.com (3 o's)
