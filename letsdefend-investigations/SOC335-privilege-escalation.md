@@ -16,10 +16,15 @@
 
 ## Investigation Process 
 ### Step 1 - CVE Research 
-### Step 2 - Process Analysis 
-### Step 3 - Hash Check (VirusTotal)
-### Step 4 - C2 Check
-### Step 5 - Endpoitn security review
+Researched CVE-2024-49138 on NVD. Windows Common Log File System (CLFS) driver vulnerability allowing local privilege escalation to SYSTEM level.
+### Step 2 - Process Analysis:
+svohost.exe identified as typosquatting svchost.exe. Process path C:\temp\service_installer\ is not a legitimate system directory. Parent process Powershell indicates living off the land technique.
+### Step 3 - Hash Check (VirusTotal):
+Hash(b432dcf4a0f0b601b1d79848467137a5e25cab5a0b7b1224be9d3b6540122db9) checked on VirusTotal. Flagged as malicious by multiple detection engines. Relations tab revealed C2 IP addresses.
+### Step 4 - C2 Check:
+Searched C2 IP from VirusTotal Relations tab in LetsDefend Log Management. Checked if Victor's machine 172.16.17.207 made outbound connections to C2 server.
+### Step 5 - Endpoint security review:
+Checked Victor's machine on LetsDefend Endpoint Security. Confirmed svohost.exe executed successfully - device action was Allowed.
 
 ## Key Findings
 - svohost.exe - typosquatting svchost.exe
@@ -32,6 +37,12 @@
 True Positive - Privilege Escalation
 
 ## Response Actions
+1. Isolate Victor's machine from network immediately.
+2. Capture memory dump before shutdown.
+3. Block hash across all endpoint security tools.
+4. Search for svohost.exe on all machines in 172.16.17.x subnet.
+5. Patch CVE-2024-49138 on all Windows machines.
+6. Escalate to Tier 2 with full artifact report.
 
 
 ## MITRE ATT&CK
