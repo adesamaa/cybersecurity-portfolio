@@ -1,11 +1,10 @@
 import re 
 from collections import Counter
 from datetime import datetime
-print(f'Log analysis started: {datetime.now()}')
 
 def parse_log(filename):
     failed_ips = []
-
+    print(f'Log analysis started: {datetime.now()}')
     try:
         with open(filename, 'r') as f:
             for line in f:
