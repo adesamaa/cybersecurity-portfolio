@@ -68,6 +68,7 @@ Undetected: 21
 [ALERT] File is MALICIOUS - 48 engines flagged it
 
 **Real world use case:**
+
 During the LetsDefend SOC335 investigation, the file hash: 'b432dcf4a0f0b601b1d79848467137a5e25cab5a0b7b1224be9d3b6540122db9' was checked and confirmed malicious by 48 engines. This script automates that exact process.
 
   
