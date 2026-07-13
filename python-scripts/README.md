@@ -13,9 +13,9 @@ Analyses Linux auth.log files to detect brute force SSH attacks.
 - Generates a timestamped report file
 
 **libraries used:**
-- 're' - is used in order to match regular expressions for the ip addresses.
-- 'datetime' - is used in order to get the exact time the log analysis is being carried out.
-- 'collections.Counter' - so as to count the number of occurence of a particular ip address.
+- `re` - is used in order to match regular expressions for the ip addresses.
+- `datetime` - is used in order to get the exact time the log analysis is being carried out.
+- `collections.Counter` -  to count the number of occurence of a particular ip address.
 
 **How to run the script:**
 - save your log file in the same folder as your python script
@@ -48,17 +48,21 @@ Computes SHA256 hash of a file and checks it against VirusTotal's threat intelli
 - `os` - file path handling
 
 **How to run**
+
 Add your VirustTotal API key to use script the run: python hash_checker.py
 
 **Sample output:**
+
 Enter file path to check: test.txt
 SHA256: e2e36aee69006796138168a0ace5ecd5...
 [INFO] Hash not found in VirusTotal database
 
 --- DIRECT HASH CHECK ---
+
 Enter a hash to check directly (or press Enter to skip): b432dcf4a0f0b601b...
 
 --- VIRUSTOTAL RESULTS ---
+
 Malicious detections: 48
 Undetected: 21
 [ALERT] File is MALICIOUS - 48 engines flagged it
