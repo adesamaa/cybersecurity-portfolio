@@ -49,4 +49,8 @@ file_hash = get_file_hash(filepath)
 if file_hash:
     print(f'SHA256: {file_hash}')
     check_virustotal(file_hash, API_KEY)
-        
+
+print('\n --- DIRECT HASH CHECK ---')
+direct_hash = input('Enter a hash to check directly (or press Enter to skip): ')
+if direct_hash.strip():
+    check_virustotal(direct_hash.strip(), API_KEY)
