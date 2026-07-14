@@ -71,4 +71,33 @@ Undetected: 21
 
 During the LetsDefend SOC335 investigation, the file hash: 'b432dcf4a0f0b601b1d79848467137a5e25cab5a0b7b1224be9d3b6540122db9' was checked and confirmed malicious by 48 engines. This script automates that exact process.
 
+### 3. Port Scanner (port_scanner.py)
+Scans a target machine for open ports and identifies running services using Python's socket library.
+
+**What is does:**
+- Accepts a target IP or hostname
+- Scans a specified port range
+- Identifies open ports and their associated services
+- Timestamps the scan start and end time
+- Reopens total number of open ports found
+
+**Libraries used:**
+- `socket` - TCP connection attempts and service lookup
+- `datetime` - timestamping scan results
+
+**How to run:**
+python port_scanner.py
+
+**Sample output:**
+
+Scanning 192.168.x.x
+[OPEN] Port 22 - ssh
+[OPEN] Port 443 - https
+Scan complete: 2 open ports found
+
+**Important note:**
+Only scan machines you own or have explicit permission to scan. Unauthorized port scanning is illegal.
+
+**Real world use case:**
+it was used to verify open ports on home lab (e.g Wazuh VM) and it confirmed same results as Nmap (Port 22 SSH, Port 443 HTTPS) validating the script works correctly.
   
