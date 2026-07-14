@@ -92,8 +92,11 @@ python port_scanner.py
 **Sample output:**
 
 Scanning 192.168.x.x
+
 [OPEN] Port 22 - ssh
+
 [OPEN] Port 443 - https
+
 Scan complete: 2 open ports found
 
 **Important note:**
