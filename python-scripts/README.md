@@ -1,4 +1,4 @@
-```
+
 # Python Security Automation Scripts
 Security automation scripts written in Python for SOC operations.
 
@@ -27,8 +27,11 @@ Analyses Linux auth.log files to detect brute force SSH attacks.
 **Sample output**
 
 Log analysis started: 2026-07-11 23:05:55.777948
+
 [FAILED LOGIN] IP: 192.168.1.100
+
 --- BRUTE FORCE ANALYSIS ---
+
 [ALERT] Possible brute force from 192.168.1.100 - 5 attempts
 
 Report saved to brute_force_report.txt
@@ -55,8 +58,11 @@ Add your VirustTotal API key to use script the run: python hash_checker.py
 **Sample output:**
 
 Enter file path to check: test.txt
+
 SHA256: e2e36aee69006796138168a0ace5ecd5...
+
 [INFO] Hash not found in VirusTotal database
+
 
 --- DIRECT HASH CHECK ---
 
@@ -65,7 +71,9 @@ Enter a hash to check directly (or press Enter to skip): b432dcf4a0f0b601b...
 --- VIRUSTOTAL RESULTS ---
 
 Malicious detections: 48
+
 Undetected: 21
+
 [ALERT] File is MALICIOUS - 48 engines flagged it
 
 **Real world use case:**
