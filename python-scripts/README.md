@@ -86,7 +86,8 @@ Scans a target machine for open ports and identifies running services using Pyth
 - `datetime` - timestamping scan results
 
 **How to run:**
-\npython port_scanner.py
+
+python port_scanner.py
 
 **Sample output:**
 
@@ -96,8 +97,10 @@ Scanning 192.168.x.x
 Scan complete: 2 open ports found
 
 **Important note:**
+
 Only scan machines you own or have explicit permission to scan. Unauthorized port scanning is illegal.
 
 **Real world use case:**
+
 it was used to verify open ports on home lab (e.g Wazuh VM) and it confirmed same results as Nmap (Port 22 SSH, Port 443 HTTPS) validating the script works correctly.
   
