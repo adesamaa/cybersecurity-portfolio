@@ -1,4 +1,4 @@
-
+```text
 # Python Security Automation Scripts
 Security automation scripts written in Python for SOC operations.
 
@@ -58,22 +58,15 @@ Add your VirustTotal API key to use script the run: python hash_checker.py
 **Sample output:**
 
 Enter file path to check: test.txt
-
 SHA256: e2e36aee69006796138168a0ace5ecd5...
-
 [INFO] Hash not found in VirusTotal database
 
-
 --- DIRECT HASH CHECK ---
-
 Enter a hash to check directly (or press Enter to skip): b432dcf4a0f0b601b...
 
 --- VIRUSTOTAL RESULTS ---
-
 Malicious detections: 48
-
 Undetected: 21
-
 [ALERT] File is MALICIOUS - 48 engines flagged it
 
 **Real world use case:**
