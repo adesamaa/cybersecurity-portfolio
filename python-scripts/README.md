@@ -86,7 +86,7 @@ Scans a target machine for open ports and identifies running services using Pyth
 - `datetime` - timestamping scan results
 
 **How to run:**
-python port_scanner.py
+\npython port_scanner.py
 
 **Sample output:**
 
