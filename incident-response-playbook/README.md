@@ -1,0 +1,1 @@
+these things are the advantages of a quality ir playbook: consistency, speed, documentation
