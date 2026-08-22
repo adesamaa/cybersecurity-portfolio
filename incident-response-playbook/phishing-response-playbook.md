@@ -1,4 +1,4 @@
-# PHISHING INCIDENT RESPONSE PLAYBOOK
+# Phishing Incident Response Playbook
 A phishing email can come in any for. This playbook provides a structured approach for Tier 1 SOC analysts to handle any phishing incident from detection to resolution.
 
 ## Purpose
@@ -64,10 +64,12 @@ business reumes as usual
 
 
 ## MITRE ATT&CK Reference
-- T1566.001 - Spearphishing attachment
-- T1566.002 - Spearphishing link
-- T1078 - Valid Accounts (if credentials were stolen)
-- T1110 - Brute Force (credentials stuffing after harvest)
+| Technique ID | Name |
+| T1566.001 | Spearphishing attachment |
+| T1566.002 | Spearphishing link |
+| T1078 | Valid Accounts (if credentials were stolen) |
+| T1110 | Brute Force (credentials stuffing after harvest) |
+| T1589 | Gather Victim Information |
 
 ## Appendix - Key tools used
 | Tool | Purpose |
