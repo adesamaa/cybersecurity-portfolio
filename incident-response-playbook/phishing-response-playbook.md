@@ -70,11 +70,13 @@ business reumes as usual
 - T1110 - Brute Force (credentials stuffing after harvest)
 
 ## Appendix - Key tools used
-- VirusTotal - URL and hash reputation checking
-- AbuseIPDB - IP reputation checking
-- MXToolbox - Email header analysis
-- WhoIs/DomainTools - Domain investigation
-- Email gateway - Quarantine and blocking
+| Tool | Purpose |
+| --- | --- |
+| VirusTotal | URL and hash reputation checking |
+| AbuseIPDB | IP reputation checking |
+| MXToolbox | Email header analysis |
+| WhoIs/DomainTools | Domain investigation |
+| Email gateway | Quarantine and blocking |
 
 
 
