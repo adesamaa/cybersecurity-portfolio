@@ -65,6 +65,7 @@ business reumes as usual
 
 ## MITRE ATT&CK Reference
 | Technique ID | Name |
+| --- | --- |
 | T1566.001 | Spearphishing attachment |
 | T1566.002 | Spearphishing link |
 | T1078 | Valid Accounts (if credentials were stolen) |
