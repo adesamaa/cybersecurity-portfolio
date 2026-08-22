@@ -1,20 +1,32 @@
 # PHISHING INCIDENT RESPONSE PLAYBOOK
-a phishing email can come in any form, this is a proper way to handle any phishing incident you come across.
+A phishing email can come in any for. This playbook provides a structured approach for Tier 1 SOC analysts to handle any phishing incident from detection to resolution.
 
 ## Purpose
- A step-by-step guide to handle a phishing alert received by a tier 1 SOC analyst
+To provide a step-by-step guide for handling phishing alerts
+received by a Tier 1 SOC analyst, ensuring consistent and
+thorough incident response
 
 ## Scope
-- Phishing emails
-- voice phishing 
-- credential harvesting
+This playbook covers the following phishing attack types:
+- Phishing emails (malicious links and attachments)
+- Spear phishing (targeted phishing against specific individuals)
+- Voice phishing (vishing)
+- Credential harvesting attempts
 
 ## Severity Classification
+| Severity | Criteria |
+| --- | --- |
+| Low | Phishing email received, not interacted with |
+| Medium | User clicked link, but no credentials entered | 
+| High | User clinked link and entered credentials |
+| Critical | Muktiple users affected, active compromise detected |
 
 
 ## Phase 1 - Preparation
-This involves setting up the alert rules for correctly flagging a phishing event alert as dangerous or not. Policies are defined as to how to handle the phishing attempts, SIEM tools are finetuned to detect occasions of typosquatting etc.
-part of preparation is to educate employees on how to properly identifying/recognise a phishing attempt, informing them about the different techniques that might be employed and how to carefully detecct them.
+This involves setting up the alert rules for correctly flagging a phishing event alert as dangerous or not. 
+Policies are defined as to how to handle the phishing attempts, SIEM tools are finetuned to detect occasions of typosquatting etc.
+part of preparation is to educate employees on how to properly identifying/recognise a phishing attempt, 
+informing them about the different techniques that might be employed and how to carefully detecct them.
 
 ## Phase 2 - Detection & Analysis
 When a new phishing alert is received, it is the job of the SOC analyst to investigate it. This id carried oout by doing:
@@ -52,9 +64,17 @@ business reumes as usual
 
 
 ## MITRE ATT&CK Reference
-
+- T1566.001 - Spearphishing attachment
+- T1566.002 - Spearphishing link
+- T1078 - Valid Accounts (if credentials were stolen)
+- T1110 - Brute Force (credentials stuffing after harvest)
 
 ## Appendix - Key tools used
+- VirusTotal - URL and hash reputation checking
+- AbuseIPDB - IP reputation checking
+- MXToolbox - Email header analysis
+- WhoIs/DomainTools - Domain investigation
+- Email gateway - Quarantine and blocking
 
 
 
