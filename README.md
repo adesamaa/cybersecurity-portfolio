@@ -9,6 +9,7 @@ SOC Analyst in progress | Blue Team
 | [Phishing Investigation](./phishing-analysis/phishing-investigation-1.md) | NDR spoofing phishing email analyzed and artifacts collected | Notepad, VirusTotal, WhoIs |
 | [WordPress Log Analysis](./log-analysis/wordpress-compromise.md) | Apache log analysis of a compromised WordPress site | grep, awk, Kali linux |
 | [WannaCry Memory Analysis](./memory_analysis/memory-analysis-1.md) | Memory forensics on WannaCry ransomware infected Windows 7 machine using Volatility2 | Volatility2, Windows Powershell |
+| [LetsDefend Investigations](./letsdefend-investigations/READNE.md) | SOC alert investigations - phishing and privilege escalation | LetsDefend, VirusTotal, AbuseIPDB |
 | [Python Security Scripts](./python-scripts/README.md) | Three security automation scripts: log parser, hash checker, and port scanner | Python, VirusTotal API |
 | [Incident Response Playbooks](./incident-response-playbook/README.md) | Three incident response playbooks for phishing, brute force, and malware incidents following NIST SP 800-61 | NIST Framework |
 | [Vulnerability Assessment Report](./vulnerability-assessment/README.md) | Full VA report on Metasploitable 2 - 188 vulnerabilities found including 10 Critical | Nessus Essentials, VirtualBox, Metasploitable 2 |
