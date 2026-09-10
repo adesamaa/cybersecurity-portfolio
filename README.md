@@ -11,6 +11,7 @@ SOC Analyst in progress | Blue Team
 | [WannaCry Memory Analysis](./memory_analysis/memory-analysis-1.md) | Memory forensics on WannaCry ransomware infected Windows 7 machine using Volatility2 | Volatility2, Windows Powershell |
 | [Python Security Scripts](./python-scripts/README.md) | Three security automation scripts: log parser, hash checker, and port scanner | Python, VirusTotal API |
 | [Incident Response Playbooks](./incident-response-playbook/README.md) | Three incident response playbooks for phishing, brute force, and malware incidents following NIST SP 800-61 | NIST Framework |
+| [Vulnerability Assessment Report](./vulnerability-assessment/README.md) | Full VA report on Metasploitable 2 - 188 vulnerabilities found including 10 Critical | Nessus Essentials, VirtualBox, Metasploitable 2 |
 
 
 ## Connect 
